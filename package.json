@@ -1,0 +1,22 @@
+{
+  "name": "vehicle-management-system",
+  "version": "1.0.0",
+  "description": "車両情報管理システム",
+  "scripts": {
+    "dev": "concurrently \"npm run dev:server\" \"npm run dev:client\"",
+    "dev:server": "cd server && npm run dev",
+    "dev:client": "cd client && npm start",
+    "install:all": "npm install && cd server && npm install && cd ../client && npm install",
+    "build": "cd client && npm run build",
+    "start:server": "cd server && npm start",
+    "db:init": "cd server && npm run init-db",
+    "db:migrate": "cd server && npm run db:migrate"
+  },
+  "dependencies": {
+    "react-qr-reader": "^3.0.0-beta-1",
+    "sequelize": "^6.37.7"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
